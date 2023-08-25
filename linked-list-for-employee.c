@@ -68,20 +68,11 @@ int main()
     case 5:
       search(origin);
       break;
-    case 6:
-      break;
-    case 7:
-      break;
     case 0:
       return 0;
     }
 
     printf("Would you like to continue? (y/n): ");
-    //! This is the problem
-    //! Since c is a char, it means that it can only accept one character at most. Meaning when it will leave the other character beside the first character to the next scanf.
-    // char c;
-    // scanf("%s", &c);
-    //! ------------------------------------------
     
     scanf("%s", &c);
     fflush(stdin);
@@ -228,15 +219,15 @@ Employee input()
 
   fflush(stdin);
   printf("Name: ");
-  scanf("%s", e.name);
+  gets(e.name);
 
   fflush(stdin);
   printf("Phone number: ");
-  scanf("%s", e.phone_num);
+  gets(e.phone_num);
 
   fflush(stdin);
   printf("Date of birth: ");
-  scanf("%s", e.dob);
+  gets(e.dob);
 
   fflush(stdin);
   printf("Salary: ");
@@ -387,7 +378,7 @@ void modifyNode(NodeType *origin)
           char name[20];
           printf("Enter new Name: ");
           fflush(stdin);
-          scanf("%s", &origin->e.name);
+          gets(origin->e.name);
 
           break;
 
@@ -396,7 +387,7 @@ void modifyNode(NodeType *origin)
           char p_num[20];
           printf("Enter new Phone Number: ");
           fflush(stdin);
-          scanf("%s", &origin->e.phone_num);
+          gets(origin->e.phone_num);
 
           break;
 
@@ -405,7 +396,7 @@ void modifyNode(NodeType *origin)
           char dob[20];
           printf("Enter new Date of Birth: ");
           fflush(stdin);
-          scanf("%s", &origin->e.dob);
+          gets(origin->e.dob);
 
           break;
 

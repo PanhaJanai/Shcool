@@ -49,9 +49,9 @@ int main()
     switch (options("default"))
     {
     case 1:
-      printf("--------------------------------------------------------------------------------------------------------------------------------+\n");
-      printf("Employee information:                                                                                                           |\n");
-      printf("--------------------------------------------------------------------------------------------------------------------------------+\n");
+      printf("+-------------------------------------------------------------------------------------------------------------------------------+\n");
+      printf("| Employee information:                                                                                                         |\n");
+      printf("+-------------------------------------------------------------------------------------------------------------------------------+\n");
       output(origin);
       break;
     case 2:
@@ -60,6 +60,7 @@ int main()
       break;
     case 3:
       modifyNode(origin);
+      writeToFile(origin);
       break;
     case 4:
       origin = deleteNode(origin);
@@ -67,6 +68,9 @@ int main()
       break;
     case 5:
       search(origin);
+      break;
+    case 6:
+      printf("There are %i employees\n", getEmployeesAmount());
       break;
     case 0:
       return 0;
@@ -100,6 +104,7 @@ int options(char *mode)
       3. Modify employee existing date\n\
       4. Delete employee from linked list\n\
       5. Search employee\n\
+      6. Count employees\n\
       ---------------------------------\n\
       Your option:\
     ");

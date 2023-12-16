@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+  
+ <html lang="en"> 
+   <head> 
+     <title>animation</title> 
+     <script> 
+  
+       document.addEventListener('DOMContentLoaded', function() { 
+  
+         const bodyStyle = document.querySelector('html').style; 
+  
+         // bodyStyle.animationName = 'rgb2'; 
+         // bodyStyle.animationDuration = '5s'; 
+         // bodyStyle.animationIterationCount = 'infinite'; 
+         // bodyStyle.animationFillMode = 'forward'; 
+  
+         bodyStyle.animationPlayState = "paused"; 
+         document.querySelector('button').innerHTML = "Start"; 
+  
+         document.querySelector('button').onclick = () => { 
+           if (bodyStyle.animationPlayState === "paused") { 
+             bodyStyle.animationPlayState = "running"; 
+             document.querySelector('button').innerHTML = "Stop"; 
+           } else { 
+             bodyStyle.animationPlayState = "paused"; 
+             document.querySelector('button').innerHTML = "Start"; 
+           } 
+         }; 
+       }); 
+  
+     </script> 
+     <style> 
+  
+       @keyframes rgb { 
+         /* animate rainbow */ 
+         0% { color: rgb(255, 0, 0); } 
+         10% { color: rgb(255, 127, 0); } 
+         20% { color: rgb(255, 255, 0); } 
+         30% { color: rgb(0, 255, 0); } 
+         40% { color: rgb(0, 0, 255); } 
+         50% { color: rgb(75, 0, 130); } 
+         60% { color: rgb(255, 0, 238); } 
+         70% { color: rgb(0, 0, 255); } 
+         80% { color: rgb(0, 255, 0); } 
+         90% { color: rgb(255, 255, 0); } 
+         100% { color: rgb(255, 127, 0); } 
+       } 
+  
+       @keyframes rgb2 { 
+         /* animate rainbow */ 
+         0% { background-color: rgb(255, 0, 0); } 
+         10% { background-color: rgb(255, 127, 0); } 
+         20% { background-color: rgb(255, 255, 0); } 
+         30% { background-color: rgb(0, 255, 0); } 
+         40% { background-color: rgb(0, 0, 255); } 
+         50% { background-color: rgb(75, 0, 130); } 
+         60% { background-color: rgb(255, 0, 238); } 
+         70% { background-color: rgb(0, 0, 255); } 
+         80% { background-color: rgb(0, 255, 0); } 
+         90% { background-color: rgb(255, 255, 0); } 
+         100% { background-color: rgb(255, 127, 0); } 
+       } 
+  
+       html { 
+         animation-name: rgb2; 
+         animation-duration: 2s; 
+         animation-fill-mode: forwards; 
+         animation-iteration-count: infinite; 
+       } 
+  
+       h1 { 
+         animation-name: rgb; 
+         animation-duration: 20s; 
+         animation-fill-mode: forwards; 
+         animation-iteration-count: infinite; 
+       } 
+  
+       /* make the window has the rgb animation */ 
+       /* body { 
+         animation-name: rgb2; 
+         animation-duration: 20s; 
+         animation-fill-mode: forwards; 
+         animation-iteration-count: infinite; 
+       } */ 
+  
+       h2 { 
+         color: rgb(180, 1, 200);
+       } 
+  
+       button { 
+         font-size: 50px; 
+         background-color: transparent; 
+         margin: 10px; 
+         padding: 20px; 
+       } 
+  
+     </style> 
+   </head> 
+   <body> 
+     <button></button> 
+     <!-- <h1>Hello, World!</h1> --> 
+     <!-- <h2>Hello!</h2> --> 
+   </body> 
+ </html>

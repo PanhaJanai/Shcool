@@ -1,0 +1,14 @@
+{
+	"name": "Panha",
+	"age": 19,
+	"hobby": [
+		"Listening to music",
+		"dicover new thing tech related",
+		"build stuff using programming languages"
+	],
+	"family": {
+		"mother": "classified",
+		"farther": "classified"
+	},
+	"Married": false
+}

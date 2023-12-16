@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Remover",
+  "version": "1.0",
+  "description": "Removes any tabs that are more than 4",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs"]
+}
